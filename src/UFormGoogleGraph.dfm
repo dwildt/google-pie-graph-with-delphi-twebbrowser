@@ -1,9 +1,9 @@
-object FormGoogleGraph: TFormGoogleGraph
+object FormGoogleChart: TFormGoogleChart
   Left = 192
   Top = 124
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
-  Caption = 'Demonstra'#231#227'o de uso do Google Graph em um app Desktop'
+  Caption = 'Demonstra'#231#227'o de uso do Google Chart em um app Desktop'
   ClientHeight = 339
   ClientWidth = 707
   Color = clBtnFace

@@ -2,12 +2,12 @@ program GoogleGraph;
 
 uses
   Forms,
-  UFormGoogleGraph in 'src\UFormGoogleGraph.pas' {FormGoogleGraph};
+  UFormGoogleChart in 'src\UFormGoogleChart.pas' {FormGoogleChart};
 
 {$R *.res}
 
 begin
   Application.Initialize;
-  Application.CreateForm(TFormGoogleGraph, FormGoogleGraph);
+  Application.CreateForm(TFormGoogleChart, FormGoogleChart);
   Application.Run;
 end.

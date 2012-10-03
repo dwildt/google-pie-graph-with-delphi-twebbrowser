@@ -3,9 +3,9 @@ unit UFormGoogleGraph;
 (*
 
 Exemplo de uso do TWebBrowser e componentes DataAware para interagir com
-o Google Graph API.
+o Google Chart API.
 
-Exemplo usado: Pie Chart
+Gráfico de exempo: Pie Chart
 https://google-developers.appspot.com/chart/interactive/docs/gallery/piechart
 
 Organizado por:
@@ -30,7 +30,7 @@ uses
   StdCtrls, Grids, DBGrids, DBClient;
 
 type
-  TFormGoogleGraph = class(TForm)
+  TFormGoogleChart = class(TForm)
     dsTipos: TDataSource;
     cdsTipos: TClientDataSet;
     DBGrid: TDBGrid;
@@ -53,7 +53,7 @@ type
   end;
 
 var
-  FormGoogleGraph: TFormGoogleGraph;
+  FormGoogleChart: TFormGoogleChart;
 
 implementation
 
@@ -61,17 +61,17 @@ implementation
 
 uses ActiveX;
 
-procedure TFormGoogleGraph.cdsTiposAfterDelete(DataSet: TDataSet);
+procedure TFormGoogleChart.cdsTiposAfterDelete(DataSet: TDataSet);
 begin
   GerarGrafico;
 end;
 
-procedure TFormGoogleGraph.cdsTiposAfterPost(DataSet: TDataSet);
+procedure TFormGoogleChart.cdsTiposAfterPost(DataSet: TDataSet);
 begin
   GerarGrafico;
 end;
 
-procedure TFormGoogleGraph.GerarGrafico;
+procedure TFormGoogleChart.GerarGrafico;
   var
    sl: TStringList;
    ms: TMemoryStream;
@@ -99,7 +99,7 @@ begin
    end;
 end;
 
-procedure TFormGoogleGraph.pgProdGooglePieHTMLTag(Sender: TObject; Tag: TTag;
+procedure TFormGoogleChart.pgProdGooglePieHTMLTag(Sender: TObject; Tag: TTag;
   const TagString: String; TagParams: TStrings; var ReplaceText: String);
 begin
   if TagString = 'DATA' then
